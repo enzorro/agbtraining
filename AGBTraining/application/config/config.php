@@ -521,3 +521,12 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+// Definimos nuestras constantes
+	// Tiempos
+	define('TIEMPO_SESION', 0);	// 15 minutos de inactividad
+	
+	// Tipos de clientes
+	define('TIPO_ADMIN', 1);
+	define('TIPO_ENTRENADOR', 100);
+	define('TIPO_PUPILO', 200);

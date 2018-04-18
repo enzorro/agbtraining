@@ -1,13 +1,6 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
-
-	// Comprobar si ya esta logueado el cliente
-	if(isset($_SESSION['idsesion'])){
-		//redirigir a la vista correspondiente
-		ver('redirigir');
-	}
-
-
+	
 	echo validation_errors();
 	if(isset($error_message)){
 		// Ha fallado el login
