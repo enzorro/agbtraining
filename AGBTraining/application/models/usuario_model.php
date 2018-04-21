@@ -66,5 +66,27 @@
         return false;
       }
     }
+
+    /* obtiene los usuarios con una consulta SQL que utiliza LIMIT para devolver una cantidad limitada de 5 */
+    function get_usuarios($tipo, $num, $offset){
+      $this->db->select('*');
+      $this->db->from('usuario');
+      $this->db->where("tipo", $tipo);
+      // Hacemos la llamada
+      $query = $this->db->get('', $num, $offset);
+      return $query->result_object();
+    }
+
+    /* retorna la cantidad de usuarios que hay en la tabla usuario */
+    function get_usuarios_cantidad ($tipo = ''){
+        $this->db->select('*');
+        $this->db->from('usuario');
+        if(!empty($tipo)){
+          $this->db->where("tipo", $tipo);
+        }
+        // Hacemos la llamada
+        $query = $this->db->get();
+        return count($query);
+    }
  }
   

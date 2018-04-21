@@ -1212,14 +1212,14 @@ abstract class CI_DB_driver {
 	 * @param	string
 	 * @return	int
 	 */
-	public function count_all($table = '')
+	public function count_all($table = '', $filter = '' )
 	{
 		if ($table === '')
 		{
 			return 0;
 		}
 
-		$query = $this->query($this->_count_string.$this->escape_identifiers('numrows').' FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE));
+		$query = $this->query($this->_count_string.$this->escape_identifiers('numrows').' FROM '.$this->protect_identifiers($table, TRUE, NULL, FALSE).$filter);
 		if ($query->num_rows() === 0)
 		{
 			return 0;

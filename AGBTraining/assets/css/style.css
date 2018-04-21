@@ -13,6 +13,10 @@
     .pointer{
         cursor: pointer;
     }
+    /* -- Texto -- */
+    .negrita{
+    	font-weight: bold;
+    }
 
     /* -- Colores -- */
     .celeste{
