@@ -725,3 +725,58 @@
     .border-no{
         border: none!important;
     }
+
+    /* -- Tabla --*/
+    .dataTables_wrapper .row{
+    	font-size: 12px;
+    }
+
+	.dataTables_wrapper .dataTables_length .form-control-sm{
+    	width: 65px!important;
+    }
+
+    .dataTables_wrapper .dataTables_filter .form-control-sm{
+    	width: 130px!important;
+    }
+
+	.dataTables_wrapper .pagination li{
+		padding: 0 6px!important;
+	}
+
+	.dataTables_wrapper .pagination a{
+		padding: 3px 6px;
+	}
+
+	.dataTables_wrapper .pagination a:hover{
+		border-color: #4A8AB5;
+		background: #4A8AB5;
+	}
+
+    @media (max-width: 768px) {
+        body{
+            font-size: 8px;
+        }
+        .table-condensed-xs > thead > tr > th,
+        .table-condensed-xs > tbody > tr > th,
+        .table-condensed-xs > tfoot > tr > th,
+        .table-condensed-xs > thead > tr > td,
+        .table-condensed-xs > tbody > tr > td,
+        .table-condensed-xs > tfoot > tr > td {
+            padding: 2px;
+            font-size: 8px;
+        }
+    }
+    @media screen and (max-width: 1199px) and (min-width: 769px){
+        body{
+            font-size: 10px;
+        }
+        .table-condensed-xs > thead > tr > th,
+        .table-condensed-xs > tbody > tr > th,
+        .table-condensed-xs > tfoot > tr > th,
+        .table-condensed-xs > thead > tr > td,
+        .table-condensed-xs > tbody > tr > td,
+        .table-condensed-xs > tfoot > tr > td {
+            padding: 5px;
+            font-size: 10px;
+        }
+    }
